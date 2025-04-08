@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="obraku.css">
+</head>
+<body>
+    
+ <!--SLIDESHOW-->
+ <div class="carousel-kontejner">
+    <div class="centriraj-carousel">
+  <h1 class="h1-o-braku subtitle">CITATI</h1>
+  
+  <div class="carousel-container">
+    <div class="arrow left-arrow" onclick="prevSlide()">&#10094;</div>
+    <div class="arrow right-arrow" onclick="nextSlide()">&#10095;</div>
+  
+    <div class="card žuta far-left">
+        <p>woow</p>
+    </div>
+    <div class="card crvena left">
+        <p>Nothing is impossible, the word itself says 'I'm possible'!</p>
+    </div>
+    <div class="card bijela center">
+        <p>Either you run the day, or the day runs you.</p>
+    </div>
+    <div class="card crvena right">
+        <p>All our dreams can come true, if we have the courage to pursue them.</p>
+    </div>
+    <div class="card žuta far-right">
+        <p>I have never let my schooling interfere with my education.</p>
+    </div>
+  </div>
+  </div>
+  </div>
+  
+  <!--JAVASCRIPT za slideshow-->
+  <script>
+    const cards = Array.from(document.querySelectorAll('.card'));
+  
+    function rotate(dir) {
+      if (dir === 'next') {
+        cards.push(cards.shift()); // premjesti prvi na kraj
+      } else {
+        cards.unshift(cards.pop()); // premjesti zadnji na početak
+      }
+  
+      // makni sve klase
+      cards.forEach(card => {
+        card.classList.remove('far-left', 'left', 'center', 'right', 'far-right');
+      });
+  
+      // dodaj nove klase po pozicijama
+      cards[0].classList.add('far-left');
+      cards[1].classList.add('left');
+      cards[2].classList.add('center');
+      cards[3].classList.add('right');
+      cards[4].classList.add('far-right');
+    }
+  
+    function nextSlide() {
+      rotate('next');
+    }
+  
+    function prevSlide() {
+      rotate('prev');
+    }
+  </script>
+  
+</body>
+</html>
