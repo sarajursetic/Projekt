@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Djeca kofera - projektne aktivnosti</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav class="navbar-container">
+      <div class="logo">
+        <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
+      </div>
+      <div class="sidebar-menu">
+        <ul>
+          <li class="x-sidebar" onclick="hideSidebar()">
+            <a href="#">
+              <img
+                src="img/xmark.svg"
+                alt="x / close window"
+                class="xSidebar"
+              />
+            </a>
+          </li>
+          <li><a href="index.html">Naslovnica</a></li>
+          <li><a href="o_projektu.html">O projektu</a></li>
+          <li><a href="projektne_aktivnosti.html">Projektne aktivnosti</a></li>
+          <li><a href="o_braku.html">O braku</a></li>
+        </ul>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Naslovnica</a></li>
+          <li><a href="o_projektu.html">O projektu</a></li>
+          <li><a href="projektne_aktivnosti.html">Projektne aktivnosti</a></li>
+           <li><a href="o_braku.html">O braku</a></li> 
+        </ul>
+      </div>
+      <div class="menu1" onclick="sidebar()">
+        <a href="#"> <img src="img/menu-icon.svg" alt="menu ikona" /></a>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="header-container">
+      <header>
+        <div class="header-text-container">
+          <h1 class="title-header">PROJEKTNE AKTIVNOSTI</h1>
+          <h2 class="subtitle">DJECA KOFERA</h2>
+        </div>
+        <div class="header-img">
+          <img src="img/vizualni_identitet.png" alt="" />
+        </div>
+      </header>
+    </div>
+
+    
+      <!--MEDIJSKI SADRŽAJ-->
+      <div class="container-medijski-sadrzaji">
+        <div class="medijski-sadrzaji">
+          <h2 class="subtitle">MEDIJSKI SADRŽAJI</h2>
+          <div class="medijski-sadrzaj-1" >
+            <h3 class="small-title">INTERVIJU S GORDANOM BULJAN FLANDER</h3>
+            <p class="paragraph">
+              Intervjuirali smo: prof.dr.sc. GORDANU BULJAN FLANDER – kliničku
+              psihologinju, integrativnog psihoterapeuta za djecu, adolescente i
+              odrasle, stalna sudska vještakinja za zlostavljanu i
+              traumatiziranu djecu. Autorica knjige u suradnji s Mijom Roje Đapo
+              „ Dijete u (središtu) sukoba. Razvod roditelja, visoki konflikt i
+              otuđenje: Znanost teorija i klinička praksa<br>
+              <a href="" target="_blank"><button>POGLEDAJ INTERVIJU</button></a>
+            </p>
+            <div class="med-sad-gallery-1">
+              <img src="img/gordana-interviju-1.jpg" alt="" onclick="FullView(this.src)" />
+              <img src="img/gordana-interviju-2.jpg" alt="" onclick="FullView(this.src)">
+              <img src="img/gordana-interviju-3.jpg" alt="" onclick="FullView(this.src)">
+            </div>
+           
+
+            <h3 class="small-title">INTERVIJU S MORANOM MAKOVEC</h3>
+            <p class="paragraph">
+              Moranu Makovec, socijalnu radnicu zaposlenu u Hrvatskom zavodu za socijalni rad i edukanticu 4. godine za dječjeg i adolescentnog integrativnog psihoterapeuta<br>
+              <a href="" target="_blank"><button>POGLEDAJ INTERVIJU</button></a> 
+            </p>
+            <div class="med-sad-gallery-1">
+              <img src="img/morana-interviju-1.jpg" alt="" onclick="FullView(this.src)">
+              <img src="img/morana-interviju-2.jpg" alt=""  onclick="FullView(this.src)">
+              <img src="img/morana-interviju-3.jpg" alt=""  onclick="FullView(this.src)">
+            </div>
+
+            
+            <h3 class="small-title">INTERVIJU DOM ZA STARIJE</h3>
+            <p class="paragraph">
+             Intervjuirali smo štićenike Doma za starije i nemoćne, Peščenica i razgovarli o obitelji i domu
+            </p>
+            <div class="med-sad-gallery-1">
+              <img src="img/dom-1.jpg" alt="" onclick="FullView(this.src)">
+              <img src="img/dom-2.jpg" alt="" onclick="FullView(this.src)">
+              <img src="img/dom-3.jpg" alt="" onclick="FullView(this.src)">
+            </div>
+
+            <h3 class="small-title">SNIMANJE TIK TOKA</h3>
+            <p class="paragraph">
+             Intervjuirali smo učenike Škole za grafiku, dizajn i medijsku produkciju
+
+            </p>
+            <div class="med-sad-gallery-1">
+              <img src="img/tiktok-1.jpg" alt=""  onclick="FullView(this.src)">
+              <img src="img/tiktok-2.jpg" alt=""  onclick="FullView(this.src)">
+              <img src="img/tiktok-3.jpg" alt=""  onclick="FullView(this.src)">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div id="FullImageView">
+      <img id="FullImage">
+      <span id="CloseButton" onclick="CloseFullView()">X</span>
+    </div>
+    <!--PREZENTIRANJE VJEĆA-->
+
+    <div class="prezentiranje-predsjednik-wrapper">
+      <div class="prezentiranje-predsjednik">
+          <h2 class="subtitle">
+            PREDSTAVLJANJE PROJEKTA <br>
+            U UREDU PREDSJEDNIKA
+          </h2>
+          <p class="paragraph">Povod odlasku bio je predstavljanje školskog projekta Djeca kofera, ali smo u razgovoru prvenstveno predstavili svoju školu, povijest, postignuća i potencijal. Projekt su, uz mentorstvo naše socijalne pedagoginje Nives Butorajac Radiček, osmislile učenice 2. B razreda. Projekt se bavi pitanjima definiranja i funkcije obitelji te odnosa unutar nje.</p>
+        <a href="https://skola-gdmp.hr/2025/03/25/predstavljanje-skolskog-projekta-u-uredu-predsjednika-republike-hrvatske/" target="_blank"><button>PROČITAJ VIŠE</button></a>
+          <div class="prezentiranje-predsjednik-slike">
+          <img src="img/sastanak-1.jpg" alt=""  onclick="FullView(this.src)">
+          <img src="img/sastanak-2.jpg" alt=""    onclick="FullView(this.src)">
+        </div>
+      </div>
+    </div>
+
+<div class="prezentiranje-vjece-wrapper">
+    <div class="prezentiranje-vjece">
+        <h2 class="subtitle">
+          SLIKE S VJEĆA UČENIKA
+        </h2>
+      <div class="prezentiranje-vjece-slike">
+        <img src="img/vjece-1.jpg" alt="" onclick="FullView(this.src)">
+        <img src="img/vjece-2.jpg" alt=""   onclick="FullView(this.src)">
+      </div>
+    </div>
+  </div>
+
+  <div class="prezentiranje-web-wrapper">
+    <div class="prezentiranje-web">
+        <h2 class="subtitle">
+          PREZENTIRANJE
+          WEB DIZAJNERIMA
+        </h2>
+      <div class="prezentiranje-web-slike">
+        <img src="img/web-1.jpg" alt=""  onclick="FullView(this.src)">
+        <img src="img/web-2.jpg" alt=""   onclick="FullView(this.src)">
+      </div>
+    </div>
+  </div>
+
+  <div class="prezentiranje-gud-wrapper">
+    <div class="prezentiranje-gud">
+        <h2 class="subtitle">
+          PREZENTIRANJE<br>
+          GRAFIČKIM UREDNICIMA-DIZAJNERIMA
+        </h2>
+      <div class="prezentiranje-gud-slike">
+        <img src="img/gud-1.jpg" alt=""     onclick="FullView(this.src)">
+        <img src="img/gud-2.jpg" alt=""   onclick="FullView(this.src)">
+      </div>
+    </div>
+  </div>
+
+
+    <div class="footer-container">
+      <footer>
+        <div class="footer-logo">
+          <img src="img/logo_footer.png" alt="LogoFooter" />
+        </div>
+        <div class="adresa-footer">
+          <h3 class="small-title">ADRESA</h3>
+          <p>Škola za grafiku, dizajn i medijsku produkciju</p>
+          <p>Getaldićeva 2, Zagreb</p>
+        </div>
+        <div class="kontakt-footer">
+          <h3 class="small-title">KONTAKT</h3>
+          <p>
+            <a href="mailto:djecakofera@gmail.com">djecakofera@gmail.com</a>
+          </p>
+          <p><a href="tel:+0915607896"></a>0915607896</p>
+          <br />
+        </div>
+        <div class="footer-people">
+          <p>
+            Projekt izradili učenici 2.b, 3.b, 3.d i Nives Butorajac Radiček,
+            socijalna pedagoginja.
+          </p>
+          <br />
+        </div>
+        <div class="footer-logo-skole">
+          <img src="img/logo_skole.svg" alt="logoSkole" />
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript">
+      function FullView(ImgLink) {
+        // Check if the screen width is greater than 768px
+        if (window.innerWidth > 768) {
+          document.getElementById("FullImage").src = ImgLink;
+          document.getElementById("FullImageView").style.display = "block";
+        }
+      }
+
+      function CloseFullView() {
+        document.getElementById("FullImageView").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

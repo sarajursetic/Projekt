@@ -1781,7 +1781,7 @@ pointer-events: none;
 
 .bijela { background-color: white; }
 .crvena { background-color: #bf1e2e }
-.žuta { background-color: #FAA916; }
+.zuta { background-color: #FAA916; }
 
 .left { transform: translateX(-40vh) scale(0.95) translateY(50px); }
 .far-left { transform: translateX(-60vh) scale(0.85); }
@@ -1814,35 +1814,225 @@ pointer-events: none;
 }
 
 
+
 /* MEDIA QUERIES ZA RESPONZIVNOST */
 
-@media (max-width: 1200px) {
-  .o-braku {
-    margin-top: 50px;
-    flex-direction: column;
-  }
 
-  .o-braku-text,
-  .o-braku-img {
+@media (max-width: 600px) {
+
+ /*O BRAKU crveni dio*/
+
+
+ .o-braku-container {
+  background-color: #bf1e2e;
+  padding: 60px;
+  color: white;
+  clip-path: polygon(0% 0%, 100% 25%, 100% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.o-braku {
+  max-width: 1220px;
+  display: flex;
+  flex-direction: column; /* <-- Promijenjeno iz row u column */
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 125px;
+}
+
+.o-braku-text {
+  width: 100%; /* Prilagođeno za vertikalni layout */
+  margin: 40px 0;
+  text-align: center; 
+}
+
+.o-braku-text h2 {
+  border-bottom: 7px solid #faa916;
+  width: fit-content;
+}
+
+.o-braku-text p {
+  margin-top: 30px;
+}
+
+.o-braku-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.o-braku-img img {
+  max-width: 100%;
+  height: auto;
+  align-self: flex-end; /* Osigurava da slika ide na dno */
+}
+
+.zuti-navodnik-o-braku{
+  color: #FAA916;
+  font-size: 100px;
+}
+
+.citat-o-braku{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.o-braku-citat-text{
+  font-weight: 300;
+  font-size: 30px;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/*ZALJUBLJENOST*/
+
+.zavrsetak-zaljublejnosti{
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.zaljubljenost-naslov{
+  color: #FAA916;
+  font-size: 60px;
+  font-weight: 550;
+}
+
+.zaljubljenost-podnaslov{
+  color: #FAA916;
+  font-size: 80px;
+  font-weight: 300;
+}
+
+.zaljubljenost-text{
+  color: #bf1e2e;
+  font-size: 20px;
+}
+
+
+
+.opcija-zaljubljenost img{
+  width: 100%;
+  height: 300px;
+}
+
+  .carousel-kontejner {
     width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* po defaultu gore */
+    background-color: #33292A;
+    border-top: #bf1e2e solid 10px;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    min-height: 70vh;
+    position: relative;
   }
-
+  
+  .h1-o-braku {
+    color: white;
+    margin-bottom: -200px;
+    font-weight: 300;
+  }
+  
   .carousel-container {
-    width: 95%;  /* Manja širina za manji ekran */
-    height: 250px;
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
   }
 
-  .card {
-    width: 70vw;  /* Povećaj širinu kartica na manjim ekranima */
-    max-width: 350px;
-  }
 
-  .left-arrow,
-  .right-arrow {
-    font-size: 30px;  /* Manje strelice na manjim ekranima */
-  }
+.carousel-container {
+  position: relative;
+  width: 200px;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  /* Move arrows outside the container */
+.card {
+  padding: 15px;
+  position: absolute;
+  width: 350px;
+  height: 200px;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  opacity: 1;
+  transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  z-index: 3;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.left, .right {
+z-index: 2;
+}
+
+.left::after,
+.right::after {
+content: "";
+position: absolute;
+inset: 0;
+background-color: rgba(0, 0, 0, 0.2);
+mix-blend-mode: multiply;
+border-radius: 12px;
+pointer-events: none;
+}
+
+.far-left, .far-right {
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.bijela { background-color: white; }
+.crvena { background-color: #bf1e2e }
+.zuta { background-color: #FAA916; }
+
+.left { transform: translateX(-40vh) scale(0.95) translateY(50px); }
+.far-left { transform: translateX(-60vh) scale(0.85); }
+.right { transform: translateX(40vh) scale(0.95) translateY(50px); }
+.far-right { transform: translateX(60vh) scale(0.85); }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  z-index: 5;
+  user-select: none;
+  transition: 0.2s;
+}
+
+.arrow:hover {
+  color: #ccc;
+}
+
+/* Move arrows outside the container */
 .left-arrow {
   left: -65%;  /* Increase the value to move further out */
 }
@@ -1850,52 +2040,78 @@ pointer-events: none;
 .right-arrow {
   right: -65%; /* Increase the value to move further out */
 }
+}
+@media (min-width: 600px) {
 
+
+/*O BRAKU crveni dio*/
+
+
+.o-braku-container {
+  background-color: #bf1e2e;
+  color: white;
+  clip-path: polygon(0% 0%, 100% 45%, 100% 100%, 0% 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-  .o-braku {
-    margin-top: 30px;
-    flex-direction: column;
-  }
-
-  .carousel-container {
-    height: 200px;
-  }
-
-  .card {
-    width: 80vw;  /* Širina kartica još veća */
-    max-width: 300px;
-  }
-
-  .left-arrow,
-  .right-arrow {
-    font-size: 25px;
-  }
+.o-braku {
+  max-width: 1220px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Poravnava sadržaj na dno */
+  gap: 3rem;
+  margin-top: 125px;
 }
 
-@media (max-width: 480px) {
-  .o-braku-container {
-    padding: 10px;
-  }
+.o-braku-text {
+  width: 50%;
+  margin: 100px 0;
+}
 
-  .carousel-kontejner {
-    height: 60vh;
-  }
+.o-braku-text h2 {
+  border-bottom: 7px solid #faa916;
+  width: fit-content;
+}
 
-  .carousel-container {
-    height: 180px;
-  }
+.o-braku-text p {
+  margin-top: 30px;
+}
 
-  .card {
-    width: 85vw;  /* Kartice zauzimaju veću širinu */
-    max-width: 280px;
-  }
+.o-braku-img {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Poravnava sliku na dno */
+}
 
-  .left-arrow,
-  .right-arrow {
-    font-size: 20px;
-  }
+.o-braku-img img {
+  max-width: 100%;
+  height: auto;
+  align-self: flex-end; /* Osigurava da slika ide na dno */
+}
+
+.zuti-navodnik-o-braku{
+  color: #FAA916;
+  font-size: 100px;
+}
+
+.citat-o-braku{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.o-braku-citat-text{
+  font-weight: 300;
+  font-size: 30px;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 
+}
